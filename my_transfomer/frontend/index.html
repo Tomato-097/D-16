@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Generator</title>
+    <!-- Link our stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Text Generator</h1>
+        <p class="subtitle">
+          Enter a prompt below and click Generate to call your local model.
+        </p>
+      </header>
+
+      <!-- User types their prompt here -->
+      <label for="prompt">Prompt</label>
+      <textarea
+        id="prompt"
+        rows="6"
+        placeholder="Once upon a time..."
+      ></textarea>
+
+      <!-- Sends the prompt to the backend -->
+      <button id="generate-btn" type="button">Generate</button>
+
+      <!-- Shows loading state, errors, and the model response -->
+      <p id="status" class="status" aria-live="polite"></p>
+
+      <section class="output-section">
+        <label for="output">Model response</label>
+        <div id="output" class="output-box" role="region" aria-live="polite">
+          Generated text will appear here.
+        </div>
+      </section>
+    </main>
+
+    <!-- Our JavaScript — runs after the HTML above is loaded -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+/* Basic reset — removes default browser spacing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #1a1a1a;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* Centered card layout */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Prompt input */
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-color: #3b82f6;
+}
+
+/* Primary action button */
+#generate-btn {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#generate-btn:hover {
+  background: #1d4ed8;
+}
+
+#generate-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Status messages (loading / errors) */
+.status {
+  min-height: 1.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.status.error {
+  color: #dc2626;
+}
+
+/* Output display box */
+.output-section {
+  margin-top: 1.5rem;
+}
+
+.output-box {
+  min-height: 160px;
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  white-space: pre-wrap; /* Preserve line breaks from the model */
+  word-wrap: break-word;
+}
