@@ -7,3 +7,5 @@ huggingface_hub>=0.21.0
 
 # Tokenizer fallback when not bundled inside the .pt checkpoint
 transformers>=4.38.0
+torch
+tokenizers
